@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/airplane.js"></script>
+
+    <title>Welcome To XYZ Airlines</title>
+
+</head>
+<table id="airplaneTable">
+    <thead>
+    <tr>
+        <th>Id </th>
+        <th>Name </th>
+
+    </tr>
+    </thead>
+
+</table>
+
+<table>
+
+    <thead>
+    <tr>
+        <th>Id </th>
+        <th>Name </th>
+
+    </tr>
+    </thead>
+    <tbody id="airplaneContainer">
+
+    </tbody>
+
+</table>
+<form>
+    <h2>Airplane form</h2>
+    <label for="airplaneNameInput">Name: </label>
+    <input type="text" placeholder="Airplane Name" id="airplaneNameInput" />
+    <br />
+    <button id="createAirplaneButton" type="button">Create airplane</button>
+    <button type="button" id="getAirplaneButton">get airplane</button>
+
+</form>
+
+
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Delete</th>
+    </tr>
+    <tbody id="airportContainer">
+
+    </tbody>
+</table>
+<form>
+    <h2>Airport form</h2>
+    <select id="AirportSelect" class="form-control"></select>
+    <label for="airportNameInput">Name:</label>
+    <input type="text" placeholder="Airport Name" id="airportNameInput" />
+    <br />
+    <button id="createAirportButton" type="button">Create Airport</button>
+    <button type="button" id="getAirportButton">Get Airport</button>
+</form>
+
+</head>
+<body>
+<div class="modal fade" id="airplaneModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <!--                  model body addd sth-->
+            <div class="modal-body">
+                Are you sure you want to delete?
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" id="deleteAirplane">Yes,Delete it!</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Button trigger modal  boostrap modal=search in google -->
+<!-- Modal -->
+<div class="modal fade" id="airportModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Are you sure</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <!--                  model body addd sth-->
+            <div class="modal-body">
+                Are you sure you want to delete??
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" id="deleteAirport">Yes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>
